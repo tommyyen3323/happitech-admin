@@ -1,0 +1,100 @@
+{
+  "name": "happitech-admin",
+  "version": "1.0.0",
+  "description": "Happitech Admin App.",
+  "scripts": {
+    "dev": "lerna exec -- npm run --parallel dev",
+    "lint": "eslint '**/*.{js,jsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "lerna run --parallel test",
+    "install:all": "npm install && lerna bootstrap"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^0.14.3",
+    "lerna": "^3.15.0",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4",
+    "axios": "^0.16.2",
+    "bootstrap": "^3.3.7",
+    "enzyme": "^3.1.0",
+    "moment": "^2.19.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-day-picker": "^6.2.1",
+    "react-dom": "^16.0.0",
+    "react-highcharts": "^13.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "next",
+    "react-scripts": "1.0.14",
+    "react-test-renderer": "^16.0.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.75.1",
+    "validator": "^9.0.0",
+    "body-parser": "^1.14.2",
+    "chai": "^3.5.0",
+    "composable-middleware": "^0.3.0",
+    "compression": "^1.6.0",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "errorhandler": "^1.4.2",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "helmet": "^3.9.0",
+    "jsonwebtoken": "^8.1.0",
+    "kerberos": "0.0.23",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.5",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.3.4",
+    "morgan": "^1.6.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "require-directory": "^2.1.1",
+    "serve-favicon": "^2.3.0",
+    "supertest": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint"
+    ],
+    "*.{js,jsx,json,md}": [
+      "prettier --list-different"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "file-loader": "^5.0.2",
+    "style-loader": "^1.0.1",
+    "url-loader": "^3.0.0"
+  }
+}
